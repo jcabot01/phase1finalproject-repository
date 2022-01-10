@@ -1,0 +1,52 @@
+{
+  "stocks": [
+    {
+      "id": 4,
+      "companyName": "Microsoft",
+      "ticker": "MSFT",
+      "image": "docs/assets/css/MSFT.png",
+      "currentPrice": "315.00",
+      "alertPrice": "$299.50"
+    },
+    {
+      "id": 5,
+      "companyName": "Amazon",
+      "ticker": "AMZN",
+      "image": "docs/assets/css/AMZN.png",
+      "currentPrice": "$3,280.58",
+      "alertPrice": "$3,300.00"
+    },
+    {
+      "id": 6,
+      "companyName": "Facebook",
+      "ticker": "FB",
+      "image": "docs/assets/css/FB.png",
+      "currentPrice": "$334.19",
+      "alertPrice": "$350.00"
+    },
+    {
+      "id": 7,
+      "companyName": "Nvidia",
+      "ticker": "NVDA",
+      "image": "docs/assets/css/NVDA.png",
+      "currentPrice": "$283.38",
+      "alertPrice": "$150.00"
+    },
+    {
+      "id": 8,
+      "companyName": "Berkshire Hathaway",
+      "ticker": "BRK.B",
+      "image": "docs/assets/css/BRKb.png",
+      "currentPrice": "$313.23",
+      "alertPrice": "$320.00"
+    },
+    {
+      "id": 9,
+      "companyName": "JP Morgan Chase",
+      "ticker": "JPM",
+      "image": "docs/assets/css/JPM.png",
+      "currentPrice": "$164.60",
+      "alertPrice": "$140.00"
+    }
+  ]
+}

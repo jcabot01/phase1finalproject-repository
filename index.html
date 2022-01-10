@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script defer type="text/javascript" src="index.js"></script>
+  <title>My Stock Portfolio</title>
+</head>
+<body>
+  <header>
+    <h1>My Stock Portfolio</h1>
+      <!--Stock Tiles-->
+    <div id="stock-tiles">
+    <!--company logos go here-->
+    </div>
+  </header>
+ 
+
+
+  <!--featured stock details-->
+  <div id="stock-details">
+    <img id="detail-image" src="docs/assets/css/Click a Stock! (1).png" alt="a description of how the app words"/>
+    <h3 class="ticker-symbol">Stock Symbol</h3>
+    <h3 class="current-price">Current Price</h3>
+  </div>
+
+
+  <div id="alert-container">
+    <h2 id="buy-status">Buy Status:</h2>
+    <p>
+      <span id="buy-status-phrase">Buy status goes here</span>
+    </p>
+    <h2 id="buy-Alert">BUY Alert @</h2>
+    <h2 class="alert-price">
+      Buy price goes here
+    </h2>
+
+  </div>
+    <!-- Stock watchlist builder form -->
+ 
+  <form id="new-stock">
+    <label for="new-company-name"><b>Add Company Name to Build Watch List</b></label>
+     <input type="text" name="new-company-name" placeholder="Apple" id="new-company-name"/>
+     
+     <label for="new-ticker"><b>Add Ticker</b></label>
+     <input type="text" name="new-ticker" placeholder="AAPL" id="new-ticker"/>
+     
+     <label for="new-image"><b>Add Image</b></label>
+     <input type="text" name="new-image" placeholder="URL" id="new-image"/>
+     
+     <label for="new-current-price"><b>Add Current Daily Price</b></label>
+     <input type="text" name="new-current-price" placeholder="$160.50" id="new-current-price"/>
+     
+     <label for="new-alert-price"><b>Add Your Desired Buy Price</b></label>
+     <input type="text" name="new-alert-price" placeholder="$140.50" id="new-alert-price"/>
+     <input type="submit" value="Submit" />
+  </form>  
+  
+  <!-- <div id="form-container">
+    
+  </div> -->
+
+</body>
+</html>
+
+  
