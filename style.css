@@ -15,6 +15,9 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: 3em;
+}
 header {
   width: 100%;
   color: white;

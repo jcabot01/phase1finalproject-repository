@@ -4,17 +4,9 @@
       "id": 4,
       "companyName": "Microsoft",
       "ticker": "MSFT",
-      "image": "docs/assets/MSFT.png", 
+      "image": "docs/assets/MSFT.png",
       "currentPrice": "315.00",
       "alertPrice": "$299.50"
-    },
-    {
-      "id": 5,
-      "companyName": "Amazon",
-      "ticker": "AMZN",
-      "image": "docs/assets/AMZN.png",
-      "currentPrice": "$3,280.58",
-      "alertPrice": "$3,300.00"
     },
     {
       "id": 6,
@@ -25,28 +17,36 @@
       "alertPrice": "$350.00"
     },
     {
-      "id": 7,
-      "companyName": "Nvidia",
-      "ticker": "NVDA",
-      "image": "docs/assets/NVDA.png",
-      "currentPrice": "$283.38",
-      "alertPrice": "$150.00"
+      "companyName": "Amazon",
+      "ticker": "AMZN",
+      "image": "data:image/png;base64,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",
+      "currentPrice": "$1,500",
+      "alertPrice": "$1,000",
+      "id": 9
     },
     {
-      "id": 8,
-      "companyName": "Berkshire Hathaway",
-      "ticker": "BRK.B",
-      "image": "docs/assets/BRKb.png",
-      "currentPrice": "$313.23",
-      "alertPrice": "$320.00"
+      "companyName": "Apple",
+      "ticker": "AAPL",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAVFBMVEX///9mZmZjY2NfX19bW1tXV1f8/Pzo6Ohvb29qamrb29vw8PD09PSkpKR6enqHh4fi4uLS0tLGxsaVlZW8vLzMzMy1tbWurq6NjY2bm5uBgYF0dHRc/6yQAAADvklEQVRoge2a2XLkIAxFDQK877v9//852J3MGNKdIKMiNTO5D/3SLk6xSEhCUfSjv00qHqe+V4Gp+VSnICAJy81nLjhjjO8huWpgwE7xKiA2XwRj4blNCuw3tw6Gbc+NfRPMobAZv2CZGANhGwPLeBwGm6cmdguDjWq4YhlMYbCTYKbyINjYwsIaBBstYE03zKlqpUkVgYy3Ns5ysDuh4dZ0myDYaDZ3Vw5hsMpcZlGGwWpXZZjQEggbZVfjhTpYnDFeuBAwnBv+BBmh3LLB5aIOZEDvXK4lZJ2FpGovmez7tnZFWKqWUtZhUsUhqhOmmnFe+6Xuy655OabOUcp+S1Ktql6nzHcVVFvuHACOrdS/+zo+udnzsazY+c15zo7vk7X1QBdDxeHqDfWQ6dIZ6GLsEwDrijg+rIa7K94lwh7vtBuNfpuMyspUPvnm8V3V3qHm9asR9ZCwDHGRTZW0Iw7jM7niF7vlnw15oFPxbDkMwY6NfAb5xZBu4hznVWYa7HHAMOAPcbEHGJG6dHRYTLiXsa/OC0quoYjaabFp58YtPzUgNLZ3zJkyys1l4BzdVpSrDI5rrMM1Kss9JNw9dEI4Xele7bBzPB9hUoiebrq8cr+Ac8JVFgjPPBA65t4dGy1085WIq9fM8byEKmVldC7S3WNEtNuLKWXRWRGuEL2RcVEltILu5hWY7Y3prAgwMbtdb/QQx+TilFc+JmAn5KIK7//AfL9tnb/pXKHsiJArMNVZQvsFzK1P6K94guAWhEEs5mApwlwB9UJJGF4xhuBSpoKYp1HKRJ/v7lzCuA5lwoRx7CHn0M56m/EU4o2Ftsbg/mBImnUjgnfKfPAEOxoT7QYz97rKRLrBWsItgI9pN5gddTOn/JuyrvIQF6uDIc/UC60F7GuDIow5LmCHyg5pve5N0mGLSYvPDzlVlBT9fN1uJloffUg6PefE1FzXStaH9hdPScfQ0m4I8ZR7JasnnbB0TpVIJ4xpMaQ80pgHM6ttzguLamQZyCacol5EFVXlDtsLRnQtYWr9D9E8iaJeYR+iWOk7HXeFP/ded1TrvdI3u2V9vQfilc6U38Ukbndl5T6xFqqSZCm+7y/BqyW5eQ0+24VeY9EOwwLzZ2NzIWBby3JJQT6Fw+bbCZUn9uHiUvTdu4WobKrlh0Ye6bG371LrZVgOMllbu89sXFNxWRfgNC2rWXU0dWmmgGp+3kpWtGui/z7bw8RC1V+osnlL0mrt4k8OS9EM5bJt9Uza1aiK3OWk2K1+P/o/9QuuazK9pg4CqQAAAABJRU5ErkJggg==",
+      "currentPrice": "$160.00",
+      "alertPrice": "$140.00",
+      "id": 10
     },
     {
-      "id": 9,
-      "companyName": "JP Morgan Chase",
-      "ticker": "JPM",
-      "image": "docs/assets/JPM.png",
-      "currentPrice": "$164.60",
-      "alertPrice": "$140.00"
+      "companyName": "Tesla",
+      "ticker": "TSLA",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAACACAMAAAAoNSeLAAAAbFBMVEX////oISfmAADvfn/nAA3nChXnDxjtamztZ2nrR0voGiH2vL3tZGb1r7D97+/ympvrT1L3w8TzpaXqNTnwhIT50NH++PjudHb1s7T4ycr86Onxk5TqQ0b629zxjI3zoaLrVVjpKS/sXV/qPD9PQYOSAAAFJElEQVRoge2a66KqLBCGcxQsPKblIS2t7v8eN6goCJ1W8H1/en7s3VL0FWaYGdDN5jXFua6yxi3DtM2vjuNc8zYNy0OTVfW5eOP655yjZnsFiocwJhRnhP3EGHnsVO4n1flvtz9mPqH3xvN9H0EI03LK7PjJ7YvgktPbv7q5rISpUNvs3xKoG3p/rNx/GBuEvBH6C2t6SBDVSZ73pwh8ACRdSjBig052oXtJui6LGFnXJZcy3GF2CskPxHTK4JFA1cvjw1pDeuiCJ85TnIPOTWHVczpuoUYmCCUB2srzkzp+a3g3m3jfbJmDCA/ogS8Z53QQBehp4lYn6XFPR7UvxfkkHTxFJRJHGoPXLHc5wyIAcMuEM0FXpoQNe69o5Oyw07tZsEyPU5eKjwvCQOwIF1jMdYzK6zD5xnNwWEmEaPI3j3rt3Z3nYVHNw058of0RBhPfKv43fRw2/0SHgUqSaEA8OUyPvpt0iigF9gQgDXiLwUnGjjEH9pBmAoIYMWpQG1BDemUw2ujUUNtspac67uqpo6nkHrLIYuKTRmI0tAe3abiDXOoGfzj/aQQhd96w0PVT6I77YK4XHXnYgwnEbbh70RBDHun68E4QhGRo63ovW9LOaAJ+qn02QoS0QUWY2SKQT2tFPF+V2GyucuMhXMH13qZ9Ks0qYcbiPqW5cZijKwuhnd4gV6EnCMJkz/2iEB7ciQWXwrzBKWh6EC739BJsuObLoZFCkTD+BAm/Q7FR7C6XyzND4gJT4FjZ66Yfc5TIzfajCIHssQSdiw575FXYoIFD76uwThLNEEHur0qIhg6rtz5Y6Z0VlIkMjve8EyPxAcr1sbM+dIBy8W5lyMcqaiTQapBcaVd/UdPlOqNj9+831FDqjO69MfIf0CGNBtRGNXQpScrWBoi1GkYltI5FesMaqepY+GJY46I6lreOON8SqdFEl+i+QhNNTJtcZ3RiXENd0GgT9lf4a5F1gjJAso4m8N7a7xP2a4OoCeprlArXvFspjkVaCxo72eiGE9TIQY4mhhPUSCZHE/ho6+JNjrJB4PsdH5VipWFBQip6qVvdrGiE0nZFY0VDKnqNJ6iRQDSI8QQ1IkUTOyaXoglxLGkIRa+FBDUiFL2os6SRLWnKQoIaEYpew6XuglD02nIrwbHIw+X318xFL15vypljLno93a6OGeYltJUENTIXvVYS1ATXQPYkNtytwtdN/8xU9FoodRemJbSyF2OSqei1UOouTNHEXiRhDBqavRiTtMzoWNl7MspQ9FpLUCPDEtrwXsyaoei1lqBGhqLXrlsNRS9JLWvciPm9mDW06LWYoEZo0Wup1F2gRa9tk7Nogl83+pIcP3knYAgXbCaokcxqghqprSaokcK+W2025rf4VOybnM7C/0Djx48fP378+PHjx/9OuZWY1sXRLRTgi+Vk6y/cpmVhFSqvjVyx3bahtT7CmH2My/7F/GvKAjzMQcD3R0qPfcM7AvzNQQJKJX8EtMCWqHXatu2dODn9r52XxbHf7jjza6ESX/t0Ym6ZIHW1cE7ni/t5FVzAOxstJerVgzoNLTG887bBrEZVugJ86EucH+aD5fmhxt49LLh8gNYasWBzDHyDpMSEW5IePT7U6AALV2fzPVdjdUoRb0TmbTf3ms+QJxoZcoDjoIcar6BO8kxjOQR/14i/16gjkWWPcp/xQ96igfcBJ/pA4wjewvy9duzMh5GzaCyDD+0HGpta+Iacu24B4ptnQWN+TdUXOo1/czVCBCCjRnMAAAAASUVORK5CYII=",
+      "currentPrice": "$1,058.12",
+      "alertPrice": "$700.00",
+      "id": 11
+    },
+    {
+      "companyName": "McDonalds",
+      "ticker": "MCD",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAABsCAMAAAC4uKf/AAAAZlBMVEX/////uw7/89r//fn/9uT/+O3/wzr+yEz/viT/14T/4aX/vRv/7Mf+y1r/9+j/0Gz/wTD/zWH/6sH/2pH/03b/1Hz/46r/7s7/3pn/5bL/xUP/+/P/2Yz/89z/zWT/wjf/68T/3p4R7K9KAAADMUlEQVRoge1YybarIBAUTYzRDHrNbIbr///kfdKNCt04YBZvQS1ylDpS0BYFJgg8PDw8PDw8PDw8PP4fXI+JSI47jgrPuciKn69JRWcBOK4JtUWqIJQbqr1QiFeTKTdEhewshy61CUSglcjfR/UFsacUCYPXo7nY9ylZw3wXHKToe7nWVY69qdFaTu7WUT/NfRb+u6ri5vKyVCuS80l7nb8UVUnxUl7v5JCWmuTS9PKJ4GajVUvWN8c3JV/sdplWJEdf452cmrjCzTrrV/VXUsscmcrKteXJe1OTExMt9WnuzovEYt1mINBYAidWtFSpD8sBULd7ex/K+1NzWbPUjfYxGYVeKqxj1pgiZqncXWstO9z0WiAlU1x+GnWSLWxYT4K0h3j2Wu5KA7ouCeVuEbmuxG+v5QCpu4oSQq0gJyNHLexZcxjkcboDqqJUX38OZHqIj9YG5dvDNvbQqLdYkiLvzugtwPG4q+jUjRnbZEQZs3SwfkK5sgdYlOIVuADcLfTjxbovpvscHOK40dzQeXpr0hMzwiljajsVEB+Z0dqdOkRiULBS3EIkUwtYw7kTM6kTW4pJgGQVR6O57sTMtMC634P5gPjREqnBTydmRjw+8QzmY8uPM+zETArtuw/mY8/ZW/P+1aAOvG+mAPxB12jWihEn2NpHgcMU5Jwbt2Ik4D98Mcaxs9WkXWhWKiXEGGDjNIK9wUmJWan5wb+1WeupxIrpz4wB9hcm6W5KjFI1EPMD62EryUWJUepuc84Y0OH0INhGiJ2a6321dunu1G6f1HQYIWS1j0GlEk3VNq8o9bIyw1Djpwt0pcToPwQqCGrCDEO965AwbTjScVTImDvFGNDFzPElEtZxqHCceywu8bmDtUdODA8ocz/l1e7P/N+gYp8xOByKyXlhDEfskVmf6nzFTBqTIJ4pprKdoXL7pOF8NTuv8DFu143tYjhE8/g3hscSMa4eQ8BNl/tMUGLM63zbxzGExP6qY/vwla0Y7ziKbb4uJuwrZhUCBsXCy2V69g+IDUCdT15BWp6nn3vcxFTuhEF6K6d/qC0Vu9bp9/6k9vDw8PDw8PDw8PBwwR8iGRtroyF0kgAAAABJRU5ErkJggg==",
+      "currentPrice": "$264.23",
+      "alertPrice": "$200.00",
+      "id": 12
     }
   ]
 }
