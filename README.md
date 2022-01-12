@@ -8,7 +8,7 @@ Using the form at the bottom of the page, enter the required info; company name,
 
 ## Demo
 
-![Imgur](https://i.imgur.com/xZOJbyl.gifv)
+![YAP](https://i.imgur.com/xZOJbyl.gif)
 
 ## Setup
 
