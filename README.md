@@ -8,7 +8,7 @@ Using the form at the bottom of the page, enter the required info; company name,
 
 ## Demo
 
-![](https://imgur.com/5IqxBKM.gif)
+![](https://i.imgur.com/5IqxBKM.gif)
 
 
 ## Setup
@@ -27,6 +27,8 @@ Now the web-app is free to use.  It currently has some default stocks in there t
 
 
 Jon Cabot
-Flatiron School 
+
+Flatiron School
+ 
 Software Engineering Flex Student
 
