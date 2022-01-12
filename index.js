@@ -28,6 +28,26 @@ const postNewStock = newStockObj => { //POST new Buy Price from input form
   .then(renderStockViewer) //output is sent to helper function that renders stock objects onto the page.
 }
 
+//PATCH
+//update an existing object
+const patchStock = (currentPrice, alertPrice) => { //use companyName and ticker to call up the stock object needing an update
+    const updateBody = {
+        "op": "replace", "path": "currentPrice", "value": "currentPrice",
+        "op": "replace", "path": "alertPrice", "value": "alertPrice",
+    }
+    const config = {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updateBody)
+    }
+    fetch(baseUrl + `/${id}`, config)
+    .then(res => res.json())
+    .then(renderStockViewer)
+	////probably need to run a GET after
+}
+
 //Rendering
 const renderAllStocks = stockArr => { //after GET request, we have an array of stock objects.  We need to do a forEach to render each object onto page
   stockArr.forEach(renderStockViewer) //take every object in stockArr, and for each one, we will render them in the stocks rendering
@@ -105,7 +125,6 @@ const renderStockViewer = stockObj => { //take in each stockObj, and let's assig
               return result;
           }
           priceAlert.innerText = currentAlertIf()
-
   })
 }
 
