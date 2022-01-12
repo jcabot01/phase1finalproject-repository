@@ -26,12 +26,12 @@ Now the web-app is free to use.  It currently has some default stocks in there t
 
 ## Code Highlights
 
-This project features alot of orchestrations between JavaScript, HTML, CSS, and JSON.  Throughout the project you will see various inner activity between the interface and the supporting JSON server.  This activity is achieved using fetches to server with GET, POST, and DELETE methods. One interesting bit of code found in the JavaScript file contains an "if" statement where the output message is dependent upon the comparison of the "current price" and the "alert price".  If the "current price" is greater than the "alert price", the investor doesn't need to invest because the price is too high.  Likewise, if the "current price" is less than the "alert price", then it would be a good time to buy because the stock is on a discount.
+This project features alot of orchestrations between JavaScript, HTML, CSS, and JSON.  Throughout the project you will see various inner activity between the interface and the supporting JSON server.  This activity is achieved using fetches to the server using GET, POST, and DELETE methods. One interesting bit of code found in the JavaScript file contains an "if" statement where the output message is dependent upon the comparison of the "current price" and the "alert price"; both of which have to be pulled from db.json file.  If the "current price" is greater than the "alert price", the investor doesn't need to invest because the price is too high.  Likewise, if the "current price" is less than the "alert price", then it would be a good time to buy because the stock is on a discount.
 
 ```javascript
 function currentAlertIf(){
-            let current = stockObj.currentPrice;
-            let alert = stockObj.alertPrice;
+            let current = stockObj.currentPrice; //create "current" variable, assign it to json-object "current price"
+            let alert = stockObj.alertPrice;  //do the same for "alert"
             let result;
 
             if (current > alert) {  
@@ -41,7 +41,7 @@ function currentAlertIf(){
               }
               return result;
           }
-          priceAlert.innerText = currentAlertIf()
+          priceAlert.innerText = currentAlertIf()  //priceAlert is the alert box on the webpage containing BUY Status & BUY Price.  InnerText of that <div> to the function above.
   })
 }
 ```
