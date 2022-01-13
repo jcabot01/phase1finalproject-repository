@@ -28,25 +28,6 @@ const postNewStock = newStockObj => { //POST new Buy Price from input form
   .then(renderStockViewer) //output is sent to helper function that renders stock objects onto the page.
 }
 
-//PATCH
-//update an existing object
-const patchStock = (currentPrice, alertPrice) => { //use companyName and ticker to call up the stock object needing an update
-    const updateBody = {
-        "op": "replace", "path": "currentPrice", "value": "currentPrice",
-        "op": "replace", "path": "alertPrice", "value": "alertPrice",
-    }
-    const config = {
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(updateBody)
-    }
-    fetch(baseUrl + `/${id}`, config)
-    .then(res => res.json())
-    .then(renderStockViewer)
-	////probably need to run a GET after
-}
 
 //Rendering
 const renderAllStocks = stockArr => { //after GET request, we have an array of stock objects.  We need to do a forEach to render each object onto page
@@ -125,9 +106,31 @@ const renderStockViewer = stockObj => { //take in each stockObj, and let's assig
               return result;
           }
           priceAlert.innerText = currentAlertIf()
+
+
   })
 }
 
+//PATCH
+//update an existing object
+const patchStock = (currentPrice, alertPrice) => { //use companyName and ticker to call up the stock object needing an update
+  const updateBody = {
+      "op": "replace", "path": "currentPrice", "value": "currentPrice",
+      "op": "replace", "path": "alertPrice", "value": "alertPrice",
+  }
+  const config = {
+      method: "PATCH",
+      headers: {
+          "Content-Type": "application/json",
+          'Accept': 'application/json',
+      },
+      body: JSON.stringify(updateBody)
+  }
+  fetch(baseUrl + `/${newStockObj.id}`, config)
+  .then(res => res.json())
+  .then(renderStockViewer)
+////probably need to run a GET after
+}
 const createBtn = document.getElementById("new-stock")  //assign a new variable to HTML new-stock input form
 createBtn.addEventListener('submit', (e) => {   //assign eventListener on new-stock submit button
   e.preventDefault() //prevent page reload on submission
@@ -142,6 +145,8 @@ createBtn.addEventListener('submit', (e) => {   //assign eventListener on new-st
 
   postNewStock(newStockObj)   //send new stock object to POST request
   createBtn.reset() //reset the form to blank after submission
+
+  patchStock(newStockObj)
 })
   
 getStockObjs() //on page load run GET fetch to server
