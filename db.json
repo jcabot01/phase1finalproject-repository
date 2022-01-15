@@ -5,7 +5,7 @@
       "companyName": "Microsoft",
       "ticker": "MSFT",
       "image": "docs/assets/MSFT.png",
-      "currentPrice": "315.00",
+      "currentPrice": "$315.00",
       "alertPrice": "$299.50"
     },
     {
@@ -31,38 +31,6 @@
       "currentPrice": "$346.00",
       "alertPrice": "$250.00",
       "id": 7
-    },
-    {
-      "companyName": "Google",
-      "ticker": "GOOGL",
-      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA4CAMAAABuU5ChAAAA+VBMVEX////pQjU0qFNChfT6uwU0f/O4zvs6gfSJr/j6twDoOisjePPoNSXpPjDrWU/oLRr+9vZ7pff/vAAUoUAkpEn0ran619b82pT7wgD+68j947H/+e7//PafvPm/0vuBw5Df7+P63tz3xcPxl5HnJQ7qUEXxj4n4z83zoJzqSz/vgXrucWrsY1r1tbHrSBPoOjbvcSr0kx74rRH80XntZC3xhSPmGRr86+r4sk/936EJcfPS3/yowvnbwVKjsTjx9f5urEjkuBu9tC+ErkJyvoRRpj2az6hWs23j6/0emX2z2btAiuI8k8AyqkE5nZU1pGxCiOxVmtHJ5M+PSt3WAAACGElEQVRIieWSa3fSQBCGk20CJRcW2AWKxgJtqCmieNdatV5SUtFq5f//GJeE7CXJJOT4TZ+PO+c58+7MaNr/SWd60mecTDs1pMFp28dODPZnZw/369TXseXqHNfCblDdte84krTDwUFFwnMnJyXm+bSsmZ/vlcb1+6A2x5C1xYeyPgIyJlhtYDjzjOYyZA3oFighLYxni8UMY6dCG/jy9KzTQfI8DXSnTNN0kcl1lNE9dlxYC8TnnEVmAJ02qHlPllyb58vgmQ2Np0tYgzGMo2ex6IKRihi1mPhcZyYuO8McL4yYl0vrrI6mJZpx9Or1mzqa10rFt8p7o5ArXh+lXutC8d6ZBdiXvH6PeyPFsw8KMBu8fsG9+3t473l9yD1vD+/BX3v1cgqv3lzE/8A9NCUK5sn33vugeN1DQTcVTbG/9M56H+lEAzg2d54t7iW5657xCdEx5PF+B9Lj9oO9z4hBgIZX6YyaXfmZaV9QQkU781h+Hra+7jQaFv6Or8RW3r1rhErES641D9XKigox8jJaQxyAfZOpIQm6kiuT6BvfujqVuEpkkY43u+d1RBBF35v55aVJidKSEBRFiJAk/+0PM3NjgjFFMLc/WVYzlzImLBPprzvzrlBjHUmZSH8DmqatS0QSZtcjTxUBWSlZw1bckhaYlISTcm1rIqKolJJxtRWnXUVscTFsjWFFwoy7WTM2+zX69/gDaLcy7SET9nsAAAAASUVORK5CYII=",
-      "currentPrice": "$1,200.00",
-      "alertPrice": "$1,300.00",
-      "id": 8
-    },
-    {
-      "companyName": "Tesla",
-      "ticker": "TSLA",
-      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAACACAMAAAAoNSeLAAAAbFBMVEX////oISfmAADvfn/nAA3nChXnDxjtamztZ2nrR0voGiH2vL3tZGb1r7D97+/ympvrT1L3w8TzpaXqNTnwhIT50NH++PjudHb1s7T4ycr86Onxk5TqQ0b629zxjI3zoaLrVVjpKS/sXV/qPD9PQYOSAAAFJElEQVRoge2a66KqLBCGcxQsPKblIS2t7v8eN6goCJ1W8H1/en7s3VL0FWaYGdDN5jXFua6yxi3DtM2vjuNc8zYNy0OTVfW5eOP655yjZnsFiocwJhRnhP3EGHnsVO4n1flvtz9mPqH3xvN9H0EI03LK7PjJ7YvgktPbv7q5rISpUNvs3xKoG3p/rNx/GBuEvBH6C2t6SBDVSZ73pwh8ACRdSjBig052oXtJui6LGFnXJZcy3GF2CskPxHTK4JFA1cvjw1pDeuiCJ85TnIPOTWHVczpuoUYmCCUB2srzkzp+a3g3m3jfbJmDCA/ogS8Z53QQBehp4lYn6XFPR7UvxfkkHTxFJRJHGoPXLHc5wyIAcMuEM0FXpoQNe69o5Oyw07tZsEyPU5eKjwvCQOwIF1jMdYzK6zD5xnNwWEmEaPI3j3rt3Z3nYVHNw058of0RBhPfKv43fRw2/0SHgUqSaEA8OUyPvpt0iigF9gQgDXiLwUnGjjEH9pBmAoIYMWpQG1BDemUw2ujUUNtspac67uqpo6nkHrLIYuKTRmI0tAe3abiDXOoGfzj/aQQhd96w0PVT6I77YK4XHXnYgwnEbbh70RBDHun68E4QhGRo63ovW9LOaAJ+qn02QoS0QUWY2SKQT2tFPF+V2GyucuMhXMH13qZ9Ks0qYcbiPqW5cZijKwuhnd4gV6EnCMJkz/2iEB7ciQWXwrzBKWh6EC739BJsuObLoZFCkTD+BAm/Q7FR7C6XyzND4gJT4FjZ66Yfc5TIzfajCIHssQSdiw575FXYoIFD76uwThLNEEHur0qIhg6rtz5Y6Z0VlIkMjve8EyPxAcr1sbM+dIBy8W5lyMcqaiTQapBcaVd/UdPlOqNj9+831FDqjO69MfIf0CGNBtRGNXQpScrWBoi1GkYltI5FesMaqepY+GJY46I6lreOON8SqdFEl+i+QhNNTJtcZ3RiXENd0GgT9lf4a5F1gjJAso4m8N7a7xP2a4OoCeprlArXvFspjkVaCxo72eiGE9TIQY4mhhPUSCZHE/ho6+JNjrJB4PsdH5VipWFBQip6qVvdrGiE0nZFY0VDKnqNJ6iRQDSI8QQ1IkUTOyaXoglxLGkIRa+FBDUiFL2os6SRLWnKQoIaEYpew6XuglD02nIrwbHIw+X318xFL15vypljLno93a6OGeYltJUENTIXvVYS1ATXQPYkNtytwtdN/8xU9FoodRemJbSyF2OSqei1UOouTNHEXiRhDBqavRiTtMzoWNl7MspQ9FpLUCPDEtrwXsyaoei1lqBGhqLXrlsNRS9JLWvciPm9mDW06LWYoEZo0Wup1F2gRa9tk7Nogl83+pIcP3knYAgXbCaokcxqghqprSaokcK+W2025rf4VOybnM7C/0Djx48fP378+PHjx/9OuZWY1sXRLRTgi+Vk6y/cpmVhFSqvjVyx3bahtT7CmH2My/7F/GvKAjzMQcD3R0qPfcM7AvzNQQJKJX8EtMCWqHXatu2dODn9r52XxbHf7jjza6ESX/t0Ym6ZIHW1cE7ni/t5FVzAOxstJerVgzoNLTG887bBrEZVugJ86EucH+aD5fmhxt49LLh8gNYasWBzDHyDpMSEW5IePT7U6AALV2fzPVdjdUoRb0TmbTf3ms+QJxoZcoDjoIcar6BO8kxjOQR/14i/16gjkWWPcp/xQ96igfcBJ/pA4wjewvy9duzMh5GzaCyDD+0HGpta+Iacu24B4ptnQWN+TdUXOo1/czVCBCCjRnMAAAAASUVORK5CYII=",
-      "currentPrice": "$1,000.00",
-      "alertPrice": "$1,100.00",
-      "id": 9
-    },
-    {
-      "companyName": "Netflix",
-      "ticker": "NFLX",
-      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAZlBMVEX////jAAD85uf1vb31tbfsb3HlCRXmGCHqXmHzoqXnLjPnLDHym53lAAj/+/ztbnLqTlLoO0DvgIPlAA/wjI/1sLL98PH96+zpRkr0qavue3350tPnIinsaW33w8X619jpVln4ystDGPaRAAABIklEQVRIie2S23KDIBCG9wejRhA1eKgxavL+L9kl9ABOM9PLTofvYhnW/WABiRKJROL/s1lNU34iWVSVaqlTPHT0xkMhNzu7kqsVJq+ISrsEosSNJpSUganIoq6Rk3KzTOLsShoIWrEJKIpE7ONT1M+5yQuOyhqOmRdPLD6w9pgP4sWLZ5/4ECkWqYAFxaKFb3WdtfkWLxcZiZo3OIg3zJ9n/BKr2tWF4ggXI7G3Xe3ERmZBq8suInEDloM4r/jFGVugOYjn7bWojfHiju72PEkgavKiqvKOE/yK7g79c8Dt48QThh7DUVxxp4Fr6jsnmisH3btvj7JsVUMlBF8NCXSh6B5+6TcaRdRIiJloGiT/ctjD7Piq/ocVXq6dSCQSf493w2wM3Ccs+rAAAAAASUVORK5CYII=",
-      "currentPrice": "$400.00",
-      "alertPrice": "$450.00",
-      "id": 10
-    },
-    {
-      "companyName": "Twitter",
-      "ticker": "TWTR",
-      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAApCAMAAABX0hoSAAAARVBMVEX///9dqd1Yp9xQpNtMotuLvuX6/P7h7vhvseC11O1jq96mzOra6faGvOTq8/rN4vN+uOKt0Oyaxujy+PzC3PA8nNiRwuYXIVEuAAABKElEQVRIie2Uy5KDIBBF6Qc+ERXR///UUWMloDRa2cwmZwfl4ULboNSPf2CyxRdW4ZCZKr8PjLjCeJ4whLCCVKnCV4PklfPJNAwHiEwkBtbEbTSBCB+aaaoFsUUgHYw9BR7oai5lERDMe9yFgYBsBO+VgKztMW4iEaS89Y/xsfTQX0W8lDzAHYdC4mHsy+qxqD6fIhJFOyWppFtgHYdEkJfFkUn0gOTaqJJFDYCfHfECio26YeXIXG3U+zakdjplxe3+pXeq855q67TJmZruLJz0bgNVgUmRbk64YlMmZ7rmk+ku/UPugbdRDnF7dw89e/JuC/PC6KiweHq/UvRj3XbnW9iID01oNnP0riFhvkODfa4vPuEOEev+obZj/eiWxbX+rsl+ZPgD+D4I5j/GzpMAAAAASUVORK5CYII=",
-      "currentPrice": "$50.00",
-      "alertPrice": "$60.00",
-      "id": 11
     }
   ]
 }
