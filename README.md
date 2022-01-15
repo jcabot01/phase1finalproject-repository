@@ -50,6 +50,7 @@ function currentAlertIf(){
 
 I think some ways to improve this app would be to add a PATCH method to it, allowing the user to update the current price.  This would help the user to keep track of their alert price and they would only have to modify the current price with each use.  Also, I think having the tiles display a colored border in reference to their "buy status" would be helpful.  If the stock is at a discount, the border would alert the user.  The user could click on the stock right away from the gallery of tiles at the top and not have to bother with the other stocks.
 
+
 Jon Cabot
 
 Flatiron School

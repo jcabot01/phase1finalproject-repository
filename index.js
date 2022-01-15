@@ -1,142 +1,117 @@
-
+//Global variables
 const baseUrl = "http://localhost:3000/stocks";
+let stockArray = [];
 
-//define variables
-const stockDetails = document.getElementById('stock-details')
 
 //fetches
 //GET
-const getStockObjs = () => {    //fetch stock data using GET request
-  fetch(baseUrl) //server request
-  .then(res => res.json()) //promise
-  .then(renderAllStocks) //send all retrieved data to a render helper function
+function getStockObjs() {
+  fetch(baseUrl)
+    .then(res => res.json())
+    .then(allStocks => {
+      stockArray = allStocks; //assign allStocks json data to an empty array stockArray
+      renderAllStocks(stockArray);
+    });
 }
 
 //POST
-//send input data here via callback
-const postNewStock = newStockObj => { //POST new Buy Price from input form
-  const config = {    //new stock items are submitted via input form then posted to server via POST request
-      method: "POST",
-      headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-      },
-      body: JSON.stringify(newStockObj) //new Buy Price input data is to be stringified
-  }
-  fetch(baseUrl, config) //perform a fetch request then post new object
-  .then(res => res.json()) //promise
-  .then(renderStockViewer) //output is sent to helper function that renders stock objects onto the page.
-}
-
-
-//Rendering
-const renderAllStocks = stockArr => { //after GET request, we have an array of stock objects.  We need to do a forEach to render each object onto page
-  stockArr.forEach(renderStockViewer) //take every object in stockArr, and for each one, we will render them in the stocks rendering
-}
-
-const renderStockViewer = stockObj => { //take in each stockObj, and let's assign all of the HTML parts to db.json parts and get them communicating
-  //example // "id": 2,
-          //   "companyName": "Microsoft",
-          //   "ticker": "MSFT",
-          //   "image": "./assets/stocks/msft.jpg",
-          //   "currentPrice": "$343.23",
-          //   "alertPrice": "$310.00"
-
-  //create containers for images
-  const imgContainer = document.createElement('container')
-  const img = document.createElement('img') //create an HTML img tag to display each item's picture
-  img.src = stockObj.image //connect HTML element with db.json data
-
-  //create a delete button incase we change our minds about watching certain stocks
-  const deleteBtn = document.createElement('button') //create HTML element and define as an a variable in this scope
-      deleteBtn.dataset.id = stockObj.id //assign the HTML delete button to the stock Object id
-      deleteBtn.innerText = 'Remove'
-      deleteBtn.className = 'remove-btn'
-      deleteBtn.style.cssText = 'display:flex;margin-left:33%'   
-
-  imgContainer.append(img, deleteBtn) //append img and delete btn to imgContainer
-
-//define destination container for pictures
-  const stockTiles = document.querySelector("#stock-tiles") //assign variable to stock-tiles div so we can have a gallery of all stock items.
-  stockTiles.append(imgContainer)   //append all stock images to stockTiles <div>
-
-  deleteBtn.addEventListener('click', (e) => { //pass in click event...
-      const id = e.target.dataset.id
-      // console.log(id)
-      fetch(baseUrl + `/${id}`, {method: "DELETE"})
-      .then(res => res.json())
-      .then(console.log) //log deletion; we don't need the info to go anywhere
-
-      window.location.reload();
-  })
-
-  //event listeners
-  img.addEventListener('click', () => { //pass in click event...    
-      const stockDetailsImage = document.querySelector('#detail-image')
-          stockDetailsImage.src = stockObj.image
-          stockDetailsImage.alt = stockObj.companyName
-
-          // const companyName = document.querySelector(".companyName")
-          // companyName.innerText = stockObj.companyName //assign HTML h2 to db.json companyName
-
-          const ticker = document.querySelector(".ticker-symbol")
-          ticker.innerText = stockObj.ticker //assign HTML h3 class '.ticker' to db.json restaurant
-
-          const currentPrice = document.querySelector(".current-price")
-          currentPrice.innerText = stockObj.currentPrice //assign HTML span id '#current-price' to db.json rating
-
-          
-          const alertPrice = document.querySelector(".alert-price")
-          alertPrice.innerText = stockObj.alertPrice //assign HTML <p> tag id '#alert-price' to db.json comment
-          
-
-          const priceAlert = document.querySelector("#buy-status-phrase")
-      
-
-          function currentAlertIf(){
-            let current = stockObj.currentPrice;
-            let alert = stockObj.alertPrice;
-            let result;
-
-            if (current > alert) {  
-                result = "No need to buy yet, be patient.";
-              } else {
-                result = "Time to buy! Alert price was hit."
-              }
-              return result;
-          }
-          priceAlert.innerText = currentAlertIf()
-
-
-  })
-}
-
-//PATCH
-//update an existing object
-const patchStock = (currentPrice, alertPrice) => { //use companyName and ticker to call up the stock object needing an update
-  const updateBody = {
-      "op": "replace", "path": "currentPrice", "value": "currentPrice",
-      "op": "replace", "path": "alertPrice", "value": "alertPrice",
-  }
+function postNewStock(newStockObj) {
   const config = {
-      method: "PATCH",
-      headers: {
-          "Content-Type": "application/json",
-          'Accept': 'application/json',
-      },
-      body: JSON.stringify(updateBody)
-  }
-  fetch(baseUrl + `/${newStockObj.id}`, config)
-  .then(res => res.json())
-  .then(renderStockViewer)
-////probably need to run a GET after
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify(newStockObj)
+  };
+  fetch(baseUrl, config) 
+    .then(res => res.json())
+    .then(stockObj => renderStockViewer(stockObj));
 }
-const createBtn = document.getElementById("new-stock")  //assign a new variable to HTML new-stock input form
-createBtn.addEventListener('submit', (e) => {   //assign eventListener on new-stock submit button
-  e.preventDefault() //prevent page reload on submission
 
-  //create new stock object
-  const newStockObj = {}
+function renderAllStocks(stockArray) { //take entire database array 
+  stockArray.forEach(renderStockViewer); //each one is rendered into an object
+}
+
+
+//DOM selectors
+const stockDetailsImage = document.querySelector('#detail-image');
+const ticker = document.querySelector(".ticker-symbol");
+const currentPrice = document.querySelector(".current-price");
+const alertPrice = document.querySelector(".alert-price");
+const statusPhrase = document.querySelector("#buy-status-phrase");
+
+
+function deleteHandler(e) {
+  fetch(baseUrl + `/${e.target.parentElement.id}`, { method: "DELETE" }) //take in id of object
+    .then(() => {
+      let stockElement = document.getElementById(`${e.target.parentElement.id}`) //assign variable to container id
+      stockElement.remove();
+    });
+}
+
+function currentAlertIf(stockObj) {
+  
+  let current = stockObj.currentPrice;
+  let alert = stockObj.alertPrice;
+  let result;
+
+  if (current > alert) {
+    result = "No need to buy yet, be patient.";
+  } else {
+    result = "Time to buy! Alert price was hit.";
+  }
+  return result;
+}
+  
+function addInfoToBigImage(stockObj) {
+  ticker.innerText = stockObj.ticker; //assign HTML h3 class '.ticker' to db.json ticker
+  currentPrice.innerText = stockObj.currentPrice; //assign HTML span id '#current-price' to db.json currentPrice
+  stockDetailsImage.src = stockObj.image; //assign stock-details the image from db.json
+  stockDetailsImage.alt = stockObj.companyName;
+  alertPrice.innerText = stockObj.alertPrice;
+  statusPhrase.innerText = currentAlertIf(stockObj)
+}
+
+function renderStockViewer(stockObj) { //take in object, render gallery of images
+  
+  const stockTilesDiv = document.querySelector("#stock-tiles"); //the div of tiles
+  const tileLogoContainer = document.createElement('container'); //each tile; contains logo and remove btn
+  tileLogoContainer.id = stockObj.id;
+  const stockImg = document.createElement('img');
+  const deleteBtn = document.createElement('button');
+
+  //render gallery
+  stockImg.src = stockObj.image; //assign img variable object image
+  tileLogoContainer.append(stockImg) //tileLogoContainer is container
+  stockTilesDiv.append(tileLogoContainer) //stockTilesDiv is the main <div>
+  
+  
+  //gallery tile click event
+  stockImg.addEventListener('click', () => addInfoToBigImage(stockObj))
+
+  //render delete button
+  deleteBtn.dataset.id = stockObj.id;
+  deleteBtn.innerText = 'Remove';
+  deleteBtn.className = 'remove-btn';
+  deleteBtn.style.cssText = 'display:flex;margin-left:33%';
+  tileLogoContainer.append(deleteBtn)
+
+  //addEventListener Handler //delete button click event
+  deleteBtn.addEventListener('click', (e) => deleteHandler(e))
+}
+
+const createBtn = document.getElementById("form-div")
+// addEventListener Handler//form submit
+createBtn.addEventListener('submit', (e) => newStockHandler(e))
+
+function newStockHandler (e) {
+  e.preventDefault(); //prevent page reload on submission
+  formNewStockObject()
+}
+
+function formNewStockObject () {
+let newStockObj = {}
   newStockObj.companyName = document.querySelector("#new-company-name").value
   newStockObj.ticker = document.querySelector("#new-ticker").value
   newStockObj.image = document.querySelector("#new-image").value
@@ -145,8 +120,7 @@ createBtn.addEventListener('submit', (e) => {   //assign eventListener on new-st
 
   postNewStock(newStockObj)   //send new stock object to POST request
   createBtn.reset() //reset the form to blank after submission
+}
 
-  patchStock(newStockObj)
-})
   
 getStockObjs() //on page load run GET fetch to server
