@@ -47,6 +47,7 @@ header {
   margin-right: 0.5rem;
   cursor: pointer;
   border-width: 3px;
+  padding-left: 4px;
 }
 
 #stock-tiles img:last-child {
