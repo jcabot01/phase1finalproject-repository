@@ -18,7 +18,7 @@ Using the form at the bottom of the page, enter the required info; company name,
 
 * Run `cd` `phase1finalproject` to get into the correct folder.
 
-* Run `explorer.exe index.html`. This should load the web-app.
+* Run `explorer.exe index.html` This should load the web-app.
 
 * Run `json-server --watch db.json` to get server running.
 
