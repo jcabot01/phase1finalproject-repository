@@ -65,9 +65,9 @@ function currentAlertIf(stockObj) {
 }
   
 function addInfoToBigImage(stockObj) {
-  ticker.innerText = stockObj.ticker; //assign HTML h3 class '.ticker' to db.json ticker
-  currentPrice.innerText = stockObj.currentPrice; //assign HTML span id '#current-price' to db.json currentPrice
-  stockDetailsImage.src = stockObj.image; //assign stock-details the image from db.json
+  ticker.innerText = stockObj.ticker;
+  currentPrice.innerText = stockObj.currentPrice; 
+  stockDetailsImage.src = stockObj.image; 
   stockDetailsImage.alt = stockObj.companyName;
   alertPrice.innerText = stockObj.alertPrice;
   statusPhrase.innerText = currentAlertIf(stockObj)
@@ -82,9 +82,9 @@ function renderStockViewer(stockObj) { //take in object, render gallery of image
   const deleteBtn = document.createElement('button');
 
   //render gallery
-  stockImg.src = stockObj.image; //assign img variable object image
-  tileLogoContainer.append(stockImg) //tileLogoContainer is container
-  stockTilesDiv.append(tileLogoContainer) //stockTilesDiv is the main <div>
+  stockImg.src = stockObj.image; 
+  tileLogoContainer.append(stockImg) 
+  stockTilesDiv.append(tileLogoContainer) 
   
   
   //gallery tile click event
@@ -101,12 +101,14 @@ function renderStockViewer(stockObj) { //take in object, render gallery of image
   deleteBtn.addEventListener('click', (e) => deleteHandler(e))
 }
 
+
 const createBtn = document.getElementById("form-div")
+
 // addEventListener Handler//form submit
 createBtn.addEventListener('submit', (e) => newStockHandler(e))
 
 function newStockHandler (e) {
-  e.preventDefault(); //prevent page reload on submission
+  e.preventDefault(); 
   formNewStockObject()
 }
 
@@ -118,9 +120,9 @@ let newStockObj = {}
   newStockObj.currentPrice = document.querySelector("#new-current-price").value
   newStockObj.alertPrice = document.querySelector("#new-alert-price").value
 
-  postNewStock(newStockObj)   //send new stock object to POST request
-  createBtn.reset() //reset the form to blank after submission
+  postNewStock(newStockObj)  
+  createBtn.reset()
 }
 
   
-getStockObjs() //on page load run GET fetch to server
+getStockObjs() 
