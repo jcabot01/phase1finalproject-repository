@@ -33,15 +33,6 @@ function renderAllStocks(stockArray) { //take entire database array
   stockArray.forEach(renderStockViewer); //each one is rendered into an object
 }
 
-
-//DOM selectors
-const stockDetailsImage = document.querySelector('#detail-image');
-const ticker = document.querySelector(".ticker-symbol");
-const currentPrice = document.querySelector(".current-price");
-const alertPrice = document.querySelector(".alert-price");
-const statusPhrase = document.querySelector("#buy-status-phrase");
-
-
 function deleteHandler(e) {
   fetch(baseUrl + `/${e.target.parentElement.id}`, { method: "DELETE" }) //take in id of object
     .then(() => {
@@ -51,7 +42,6 @@ function deleteHandler(e) {
 }
 
 function currentAlertIf(stockObj) {
-  
   let current = stockObj.currentPrice;
   let alert = stockObj.alertPrice;
   let result;
@@ -65,6 +55,12 @@ function currentAlertIf(stockObj) {
 }
   
 function addInfoToBigImage(stockObj) {
+  const stockDetailsImage = document.querySelector('#detail-image');
+  const ticker = document.querySelector(".ticker-symbol");
+  const currentPrice = document.querySelector(".current-price");
+  const alertPrice = document.querySelector(".alert-price");
+  const statusPhrase = document.querySelector("#buy-status-phrase");
+
   ticker.innerText = stockObj.ticker;
   currentPrice.innerText = stockObj.currentPrice; 
   stockDetailsImage.src = stockObj.image; 
@@ -74,7 +70,6 @@ function addInfoToBigImage(stockObj) {
 }
 
 function renderStockViewer(stockObj) { //take in object, render gallery of images
-  
   const stockTilesDiv = document.querySelector("#stock-tiles"); //the div of tiles
   const tileLogoContainer = document.createElement('container'); //each tile; contains logo and remove btn
   tileLogoContainer.id = stockObj.id;
